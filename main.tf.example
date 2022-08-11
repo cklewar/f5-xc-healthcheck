@@ -30,6 +30,7 @@ module "healthcheck_http" {
   f5xc_api_p12_file     = var.f5xc_api_p12_file
   f5xc_healthcheck_type = "http"
   f5xc_healthcheck_name = format("%s-hc-%s", var.project_prefix, var.project_suffix)
+  f5xc_healthcheck_http_headers = { "key" = "h1", "value" = "v1", "key" = "h2", "value" = "v2", "key" = "h3", "value" = "v3" }
 }
 
 module "healthcheck_tcp" {
