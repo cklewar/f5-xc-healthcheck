@@ -41,22 +41,22 @@ variable "f5xc_tenant" {
 module "healthcheck_http" {
   source                = "./modules/f5xc/healthcheck"
   f5xc_tenant           = var.f5xc_tenant
-  f5xc_namespace        = "system"
+  f5xc_namespace        = var.f5xc_namespace
   f5xc_api_url          = var.f5xc_api_url
   f5xc_api_p12_file     = var.f5xc_api_p12_file
   f5xc_healthcheck_type = "http"
-  f5xc_healthcheck_name = format("%s-hc-%s", var.project_prefix, var.project_suffix)
+  f5xc_healthcheck_name = format("%s-hc-http-%s", var.project_prefix, var.project_suffix)
   f5xc_healthcheck_http_headers = { "key1" = "h1", "value" = "v1", "key2" = "h2", "value" = "v2", "key3" = "h3", "value" = "v3" }
 }
 
 module "healthcheck_tcp" {
   source                        = "./modules/f5xc/healthcheck"
   f5xc_tenant                   = var.f5xc_tenant
-  f5xc_namespace                = "system"
+  f5xc_namespace                = var.f5xc_namespace
   f5xc_api_url                  = var.f5xc_api_url
   f5xc_api_p12_file             = var.f5xc_api_p12_file
   f5xc_healthcheck_type         = "tcp"
-  f5xc_healthcheck_name         = format("%s-hc-%s", var.project_prefix, var.project_suffix)
+  f5xc_healthcheck_name         = format("%s-hc-tcp-%s", var.project_prefix, var.project_suffix)
   f5xc_healthcheck_send_payload = "000000FF"
 }
 ```
