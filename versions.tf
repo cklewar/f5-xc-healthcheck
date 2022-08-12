@@ -1,5 +1,13 @@
 terraform {
   required_version = ">= 1.2.7"
+  cloud {
+    organization = "cklewar"
+    hostname     = "app.terraform.io"
+
+    workspaces {
+      name = "f5-xc-healthcheck-module"
+    }
+  }
 
   required_providers {
     f5xc = {
