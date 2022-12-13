@@ -20,7 +20,7 @@ jobs:
       with:
         repository: cklewar/f5-xc-test
         path: f5-xc-cert
-        token: ${{ secrets.PAT_TOKEN }}
+        token: ${{ secrets.GH_PAT }}
     - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
     - name: List files in the repository
       run: |
@@ -67,7 +67,7 @@ jobs:
       with:
         repository: cklewar/f5-xc-test
         path: f5-xc-cert
-        token: ${{ secrets.PAT_TOKEN }}
+        token: ${{ secrets.GH_PAT }}
     - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
     - name: List files in the repository
       run: |
@@ -123,7 +123,7 @@ jobs:
       with:
         repository: cklewar/f5-xc-test
         path: f5-xc-cert
-        token: ${{ secrets.PAT_TOKEN }}
+        token: ${{ secrets.GH_PAT }}
     - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
     - name: List files in the repository
       run: |
@@ -179,7 +179,7 @@ jobs:
       with:
         repository: cklewar/f5-xc-test
         path: f5-xc-cert
-        token: ${{ secrets.PAT_TOKEN }}
+        token: ${{ secrets.GH_PAT }}
     - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
     - name: List files in the repository
       run: |
