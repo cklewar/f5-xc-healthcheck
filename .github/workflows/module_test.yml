@@ -1,4 +1,4 @@
-name: F5XC Healthcheck module
+name: F5XC HealthCheck module
 on: workflow_dispatch
 jobs:
   f5-xc-healtcheck-module-validate:
